@@ -121,13 +121,10 @@ public class HelloApplication extends Application {
 
 
         button.setOnAction((e) -> {
-
-            TextField text11 = new TextField();
-            CheckBox check11 = new CheckBox();
-            HBox line11 = new HBox(check11, text11);
-            new VBox(line,line2,line3,line4,line5,line6,line7,line8,line9,line10,line11);
-
-
+          //  TextField text11 = new TextField();
+          //  CheckBox check11 = new CheckBox();
+          //  HBox line11 = new HBox(check11, text11);
+          //  new VBox(line,line2,line3,line4,line5,line6,line7,line8,line9,line10,line11);
         });
         stage.setScene(scene);
         stage.setTitle("Nákupní seznam");
