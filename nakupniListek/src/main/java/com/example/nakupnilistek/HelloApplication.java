@@ -32,6 +32,7 @@ public class HelloApplication extends Application {
         Label l10 = new Label();
 
 
+
         TextField text = new TextField();
         TextField text2 = new TextField();
         TextField text3 = new TextField();
@@ -99,13 +100,12 @@ public class HelloApplication extends Application {
         l9.setText("chybí: " + text9.getText());
         l10.setText("chybí: " + text10.getText());
 
-        //aby se to opakovalo
 
 
             //jak presout to do splneno:https://www.tutorialkart.com/javafx/javafx-textfield/
             //https://stackoverflow.com/questions/20273820/how-to-copy-content-from-one-tab-to-another-in-javafx
             //https://www.educba.com/javafx-textfield/
-        check.setOnAction((e) -> {
+            check.setOnAction((e) -> {
                 l.setText(text.getText());
                 check.setOnAction((e2) -> {
                     l.setText("chybí: " + text.getText());
@@ -116,13 +116,11 @@ public class HelloApplication extends Application {
             });
 
 
-        check2.setOnAction((e) -> {
+            check2.setOnAction((e) -> {
                 l2.setText(text2.getText());
                 check2.setOnAction((e2) -> {
                     l2.setText("chybí: " + text2.getText());
-                    check2.setOnAction((e3) -> {
-                        l2.setText(text2.getText());
-                    });
+
                 });
             });
 
@@ -214,25 +212,24 @@ public class HelloApplication extends Application {
                 });
             });
 
-
-        button.setOnAction((e) -> {
-            Label l11 = new Label();
-            TextField text11 = new TextField();
-            CheckBox check11 = new CheckBox();
-            HBox line11 = new HBox(check11, text11);
-            l11.setText("chybí: " + text11.getText());
-            col.getChildren().addAll(line11);
-            col2.getChildren().addAll(l11);
-            check11.setOnAction((e2) -> {
-                l11.setText(text11.getText());
-                check11.setOnAction((e3) -> {
-                    l11.setText("chybí: " + text11.getText());
-                    check11.setOnAction((e4) -> {
-                        l11.setText(text11.getText());
+            button.setOnAction((e) -> {
+                Label l11 = new Label();
+                TextField text11 = new TextField();
+                CheckBox check11 = new CheckBox();
+                HBox line11 = new HBox(check11, text11);
+                l11.setText("chybí: " + text11.getText());
+                col.getChildren().addAll(line11);
+                col2.getChildren().addAll(l11);
+                check11.setOnAction((e2) -> {
+                    l11.setText(text11.getText());
+                    check11.setOnAction((e3) -> {
+                        l11.setText("chybí: " + text11.getText());
+                        check11.setOnAction((e4) -> {
+                            l11.setText(text11.getText());
+                        });
                     });
                 });
             });
-        });
 
         pane.setOnKeyPressed((e)->{
             if(e.getCode() == KeyCode.CONTROL.SHIFT.P) {
